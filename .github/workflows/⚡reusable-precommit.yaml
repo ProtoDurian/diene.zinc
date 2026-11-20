@@ -12,6 +12,6 @@ jobs:
       - nscloud-cache-tag-nix-store-cache-ubuntu-26.04-amd64
     timeout-minutes: 20
     steps:
-      - uses: AtomiCloud/actions.setup-nix@v3
+      - uses: AtomiCloud/actions.setup-nix@v4
       - name: Run pre-commit
         run: nix develop .#ci -c ./scripts/ci/pre-commit.sh

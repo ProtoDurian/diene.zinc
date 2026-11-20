@@ -19,7 +19,7 @@ jobs:
       contents: read
       packages: write
     steps:
-      - uses: AtomiCloud/actions.setup-nix@v3
+      - uses: AtomiCloud/actions.setup-nix@v4
       - name: Publish chart
         env:
           OCI_PASSWORD: ${{ secrets.GITHUB_TOKEN }}

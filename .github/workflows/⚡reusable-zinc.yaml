@@ -12,7 +12,7 @@ jobs:
       - nscloud-cache-tag-nix-store-cache-ubuntu-26.04-amd64
     timeout-minutes: 30
     steps:
-      - uses: AtomiCloud/actions.setup-nix@v3
+      - uses: AtomiCloud/actions.setup-nix@v4
       - name: Run the unit tier
         run: nix develop .#ci -c ./scripts/ci/zinc.sh
 
@@ -24,6 +24,6 @@ jobs:
       - nscloud-cache-tag-nix-store-cache-ubuntu-26.04-amd64
     timeout-minutes: 30
     steps:
-      - uses: AtomiCloud/actions.setup-nix@v3
+      - uses: AtomiCloud/actions.setup-nix@v4
       - name: Install sulfur then zinc on k3d and read the ClusterIssuers back
         run: nix develop .#ci -c ./scripts/ci/zinc-k3d.sh
